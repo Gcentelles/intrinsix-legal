@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>What is my gold jewellery actually worth? — Intrinsix calculator</title>
-<meta name="description" content="Free calculator: the real value of a gold, silver or platinum piece at today's live spot price, plus its diamonds at wholesale. See the gap between melt value and shop price before you buy or sell." />
-<link rel="canonical" href="https://gcentelles.github.io/intrinsix-legal/calculator/" />
+<title>Wat is mijn gouden sieraad waard? — Intrinsix calculator</title>
+<meta name="description" content="Gratis rekenhulp: de echte waarde van een sieraad van goud, zilver of platina tegen de actuele goudprijs, plus de diamanten tegen groothandelsprijs. Zie het verschil tussen smeltwaarde en winkelprijs voordat je koopt of verkoopt." />
+<link rel="canonical" href="https://gcentelles.github.io/intrinsix-legal/calculator/nl/" />
 <link rel="alternate" hreflang="en" href="https://gcentelles.github.io/intrinsix-legal/calculator/" />
 <link rel="alternate" hreflang="es" href="https://gcentelles.github.io/intrinsix-legal/calculator/es/" />
 <link rel="alternate" hreflang="nl" href="https://gcentelles.github.io/intrinsix-legal/calculator/nl/" />
 <link rel="alternate" hreflang="x-default" href="https://gcentelles.github.io/intrinsix-legal/calculator/" />
-<meta property="og:title" content="What is that piece actually worth?" />
-<meta property="og:description" content="Free calculator: the real value of a gold, silver or platinum piece at today's live spot price, plus its diamonds at wholesale. See the gap between melt value and shop price before you buy or sell." />
+<meta property="og:title" content="Wat is dat sieraad echt waard?" />
+<meta property="og:description" content="Gratis rekenhulp: de echte waarde van een sieraad van goud, zilver of platina tegen de actuele goudprijs, plus de diamanten tegen groothandelsprijs. Zie het verschil tussen smeltwaarde en winkelprijs voordat je koopt of verkoopt." />
 <meta property="og:type" content="website" />
 <style>
   :root { color-scheme: dark; --bg:#0b0f10; --card:#141a1c; --line:rgba(255,255,255,.08);
@@ -47,30 +47,30 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>What is that piece actually worth?</h1>
-  <p class="lede">A shop price and a value are different numbers. This calculator gives you the second one: the metal at today's live spot, the stones at wholesale, and the ladder in between — the same engine the <a href="https://apps.apple.com/es/app/intrinsix/id6787444891">Intrinsix app</a> runs.</p>
+  <h1>Wat is dat sieraad echt waard?</h1>
+  <p class="lede">Een winkelprijs en een waarde zijn twee verschillende getallen. Deze rekenhulp geeft je het tweede: het metaal tegen de actuele goudprijs, de stenen tegen groothandelsprijs en de ladder daartussen — dezelfde motor als de <a href="https://apps.apple.com/es/app/intrinsix/id6787444891">Intrinsix-app</a>.</p>
 
-  <h2>The piece</h2>
+  <h2>Het sieraad</h2>
   <div class="card">
     <div class="grid">
       <div>
-        <label for="metal">Metal</label>
-        <select id="metal"><option value="GOLD">Gold</option><option value="SILVER">Silver</option><option value="PLATINUM">Platinum</option></select>
+        <label for="metal">Metaal</label>
+        <select id="metal"><option value="GOLD">Goud</option><option value="SILVER">Zilver</option><option value="PLATINUM">Platina</option></select>
       </div>
       <div>
-        <label for="purity" id="purityLabel">Karat</label>
+        <label for="purity" id="purityLabel">Karaat</label>
         <input id="purity" inputmode="decimal" value="18" />
       </div>
       <div>
-        <label for="weight">Net metal weight (g)</label>
+        <label for="weight">Netto metaalgewicht (g)</label>
         <input id="weight" inputmode="decimal" placeholder="e.g. 5.9" />
       </div>
       <div>
-        <label for="carat">Diamond carat (optional)</label>
+        <label for="carat">Karaat diamant (optioneel)</label>
         <input id="carat" inputmode="decimal" placeholder="e.g. 0.52" />
       </div>
       <div>
-        <label for="ppc">Wholesale €/ct (optional)</label>
+        <label for="ppc">Groothandelsprijs €/ct (optioneel)</label>
         <input id="ppc" inputmode="decimal" placeholder="e.g. 1900" />
       </div>
     </div>
@@ -78,47 +78,47 @@
   </div>
 
   <div id="results" hidden>
-    <h2>What it is worth</h2>
+    <h2>Wat het waard is</h2>
     <div class="card">
-      <div class="row"><span>Metal content</span><b id="metalPart">—</b></div>
-      <div class="row"><span>Stones</span><b id="stonePart">—</b></div>
+      <div class="row"><span>Metaalinhoud</span><b id="metalPart">—</b></div>
+      <div class="row"><span>Stenen</span><b id="stonePart">—</b></div>
     </div>
 
-    <h2>The value ladder</h2>
+    <h2>De waardeladder</h2>
     <div class="card">
-      <div class="row"><span>Intrinsic (break-up floor)</span><b id="intrinsic">—</b></div>
-      <div class="row"><span>Wholesale (dealer)</span><b id="wholesale">—</b></div>
-      <div class="row target"><span>Fair price (private sale)</span><b id="fair">—</b></div>
-      <div class="row"><span>Second-hand shop</span><b id="shop">—</b></div>
-      <div class="row"><span>New retail</span><b id="retail">—</b></div>
+      <div class="row"><span>Intrinsiek (smeltwaarde)</span><b id="intrinsic">—</b></div>
+      <div class="row"><span>Groothandel (handelaar)</span><b id="wholesale">—</b></div>
+      <div class="row target"><span>Eerlijke prijs (particuliere verkoop)</span><b id="fair">—</b></div>
+      <div class="row"><span>Tweedehandswinkel</span><b id="shop">—</b></div>
+      <div class="row"><span>Nieuw in de winkel</span><b id="retail">—</b></div>
     </div>
 
-    <h2>The gap you are paying for</h2>
+    <h2>Het verschil dat je betaalt</h2>
     <div class="card">
       <div class="gap" id="gap">—</div>
-      <small>Difference between what a shop charges new and what the same metal and stones are worth wholesale. It pays for the setting, the brand, the shop and the risk — knowing its size is the point.</small>
+      <small>Verschil tussen wat een winkel nieuw vraagt en wat hetzelfde metaal en dezelfde stenen waard zijn bij de groothandel. Dat betaalt het zetwerk, het merk, de winkel en het risico; het punt is dat je weet hoe groot het is.</small>
     </div>
 
-    <h2>Bidding at an auction?</h2>
+    <h2>Ga je bieden op een veiling?</h2>
     <div class="card">
-      <p style="margin-top:0">The app does the part a web page cannot: it reads a Catawiki lot from its URL, adds the buyer fee, VAT and import duty, and tells you the maximum you should bid.</p>
-      <a class="cta" href="https://apps.apple.com/es/app/intrinsix/id6787444891">Get Intrinsix for iPhone</a>
+      <p style="margin-top:0">De app doet wat een webpagina niet kan: hij leest een Catawiki-kavel via de link, telt de koperscommissie, btw en invoerrechten erbij op en zegt wat je maximaal zou moeten bieden.</p>
+      <a class="cta" href="https://apps.apple.com/es/app/intrinsix/id6787444891">Download Intrinsix voor iPhone</a>
     </div>
 
-    <h2>Want the buyer's guide?</h2>
+    <h2>Wil je de kopersgids?</h2>
     <div class="card">
       <form class="mail" id="mailForm">
         <input id="email" type="email" placeholder="you@email.com" aria-label="Email" />
-        <button type="submit">Send it</button>
+        <button type="submit">Stuur maar</button>
       </form>
-      <small id="mailNote">One email with how to read a jewellery listing. No list swapping, unsubscribe in one click.</small>
+      <small id="mailNote">Eén e-mail over hoe je een sieraadadvertentie leest. We delen je adres met niemand; afmelden met één klik.</small>
     </div>
   </div>
 
   <footer>
-    <p style="margin:0 0 8px">English · <a href="https://gcentelles.github.io/intrinsix-legal/calculator/es/">Español</a> · <a href="https://gcentelles.github.io/intrinsix-legal/calculator/nl/">Nederlands</a></p>
-    Estimates from your own inputs and public spot prices; not an appraisal and not financial advice.
-    <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a>
+    <p style="margin:0 0 8px"><a href="https://gcentelles.github.io/intrinsix-legal/calculator/">English</a> · <a href="https://gcentelles.github.io/intrinsix-legal/calculator/es/">Español</a> · Nederlands</p>
+    Schattingen op basis van je eigen invoer en publieke spotprijzen; geen taxatie en geen financieel advies.
+    <a href="../../privacy.html">Privacy</a> · <a href="../../terms.html">Voorwaarden</a>
   </footer>
 </div>
 <script>
@@ -126,6 +126,6 @@
   window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
   window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
 </script>
-<script src="./calculator.js"></script>
+<script src="../calculator.js"></script>
 </body>
 </html>
