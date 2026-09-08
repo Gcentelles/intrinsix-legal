@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Put the jewellery value calculator on your own site — Intrinsix</title>
 <meta name="description" content="Free embeddable calculator for jewellers, pawn shops and gold buyers: live metal prices, wholesale stone prices, your own name on it. One line of HTML." />
-<link rel="canonical" href="https://gcentelles.github.io/intrinsix-legal/calculator/embed/" />
+<link rel="canonical" href="https://intrinsix.nl/embed/" />
 <style>
   :root { color-scheme: dark; --bg:#0b0f10; --card:#141a1c; --line:rgba(255,255,255,.08);
           --gold:#c9a24b; --accent:#16aebf; --text:#eef2f1; --muted:#8b979b; }
@@ -100,17 +100,18 @@
   </div>
 
   <footer>
-    <a href="https://gcentelles.github.io/intrinsix-legal/calculator/">Calculator</a> ·
-    <a href="https://gcentelles.github.io/intrinsix-legal/calculator/../privacy.html">Privacy</a> ·
-    <a href="mailto:hello@intrinsix.app">hello@intrinsix.app</a>
+    <a href="https://intrinsix.nl/">Calculator</a> ·
+    <a href="/privacy.html">Privacy</a> ·
+    <a href="mailto:hallo@intrinsix.nl">hallo@intrinsix.nl</a>
   </footer>
 </div>
 <script>
-  var SITE = "https://gcentelles.github.io/intrinsix-legal/calculator";
+  var SITE = "https://intrinsix.nl";
+  var ROOT_LANG = "nl";
   var $ = function (id) { return document.getElementById(id); };
   function build() {
     var lang = $('lang').value;
-    var base = SITE + (lang === 'en' ? '/' : '/' + lang + '/');
+    var base = SITE + (lang === ROOT_LANG ? '/' : '/' + lang + '/');
     var q = ['embed=1'];
     if ($('theme').value === 'light') q.push('theme=light');
     if ($('brand').value.trim()) q.push('brand=' + encodeURIComponent($('brand').value.trim()));
