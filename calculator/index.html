@@ -43,12 +43,29 @@
   footer { margin-top:40px; font-size:.8rem; color:var(--muted); }
   footer a { color:var(--accent); }
   @media (max-width:520px) { .grid { grid-template-columns:1fr; } }
+
+  /* Light palette, for embeds on the white sites most jewellers run. */
+  body.light { --bg:#ffffff; --card:#f7f8f8; --line:rgba(0,0,0,.10); --text:#12191b; --muted:#5d6a6e; }
+  body.light input, body.light select { background:#fff; }
+
+  /* Embed mode: the calculator only. The host page supplies the heading, the
+     branding and the rest of the site; we leave one credit line. */
+  body.embed { background:transparent; }
+  body.embed .wrap { padding:0; max-width:none; }
+  body.embed h1, body.embed .lede, body.embed .promo, body.embed footer { display:none; }
+  body.embed #credit { display:block; }
+  #credit { display:none; margin-top:14px; font-size:.78rem; color:var(--muted); }
+  #credit a { color:var(--accent); text-decoration:none; }
+  #brandName:not(:empty) { display:block; font-size:.78rem; letter-spacing:.16em;
+                           text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>What is that piece actually worth?</h1>
   <p class="lede">A shop price and a value are different numbers. This calculator gives you the second one: the metal at today's live spot, the stones at wholesale, and the ladder in between — the same engine the <a href="https://apps.apple.com/es/app/intrinsix/id6787444891">Intrinsix app</a> runs.</p>
+
+  <div id="brandName"></div>
 
   <h2>The piece</h2>
   <div class="card">
@@ -99,6 +116,7 @@
       <small>Difference between what a shop charges new and what the same metal and stones are worth wholesale. It pays for the setting, the brand, the shop and the risk — knowing its size is the point.</small>
     </div>
 
+    <section class="promo">
     <h2>Bidding at an auction?</h2>
     <div class="card">
       <p style="margin-top:0">The app does the part a web page cannot: it reads a Catawiki lot from its URL, adds the buyer fee, VAT and import duty, and tells you the maximum you should bid.</p>
@@ -113,7 +131,10 @@
       </form>
       <small id="mailNote">One email with how to read a jewellery listing. No list swapping, unsubscribe in one click.</small>
     </div>
+    </section>
   </div>
+
+  <div id="credit">Valuation by <a href="https://gcentelles.github.io/intrinsix-legal/calculator/" target="_blank" rel="noopener">Intrinsix</a> · live metal prices, wholesale stone prices.</div>
 
   <footer>
     <p style="margin:0 0 8px">English · <a href="https://gcentelles.github.io/intrinsix-legal/calculator/es/">Español</a> · <a href="https://gcentelles.github.io/intrinsix-legal/calculator/nl/">Nederlands</a></p>
@@ -122,9 +143,9 @@
   </footer>
 </div>
 <script>
-  // Public anon key: designed to ship in clients; web_leads is insert-only under RLS.
-  window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
-  window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
+// Public anon key: designed to ship in clients; web_leads is insert-only under RLS.
+window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
+window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
 </script>
 <script src="./calculator.js"></script>
 </body>

@@ -43,12 +43,29 @@
   footer { margin-top:40px; font-size:.8rem; color:var(--muted); }
   footer a { color:var(--accent); }
   @media (max-width:520px) { .grid { grid-template-columns:1fr; } }
+
+  /* Light palette, for embeds on the white sites most jewellers run. */
+  body.light { --bg:#ffffff; --card:#f7f8f8; --line:rgba(0,0,0,.10); --text:#12191b; --muted:#5d6a6e; }
+  body.light input, body.light select { background:#fff; }
+
+  /* Embed mode: the calculator only. The host page supplies the heading, the
+     branding and the rest of the site; we leave one credit line. */
+  body.embed { background:transparent; }
+  body.embed .wrap { padding:0; max-width:none; }
+  body.embed h1, body.embed .lede, body.embed .promo, body.embed footer { display:none; }
+  body.embed #credit { display:block; }
+  #credit { display:none; margin-top:14px; font-size:.78rem; color:var(--muted); }
+  #credit a { color:var(--accent); text-decoration:none; }
+  #brandName:not(:empty) { display:block; font-size:.78rem; letter-spacing:.16em;
+                           text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>Wat is dat sieraad echt waard?</h1>
   <p class="lede">Een winkelprijs en een waarde zijn twee verschillende getallen. Deze rekenhulp geeft je het tweede: het metaal tegen de actuele goudprijs, de stenen tegen groothandelsprijs en de ladder daartussen — dezelfde motor als de <a href="https://apps.apple.com/es/app/intrinsix/id6787444891">Intrinsix-app</a>.</p>
+
+  <div id="brandName"></div>
 
   <h2>Het sieraad</h2>
   <div class="card">
@@ -99,6 +116,7 @@
       <small>Verschil tussen wat een winkel nieuw vraagt en wat hetzelfde metaal en dezelfde stenen waard zijn bij de groothandel. Dat betaalt het zetwerk, het merk, de winkel en het risico; het punt is dat je weet hoe groot het is.</small>
     </div>
 
+    <section class="promo">
     <h2>Ga je bieden op een veiling?</h2>
     <div class="card">
       <p style="margin-top:0">De app doet wat een webpagina niet kan: hij leest een Catawiki-kavel via de link, telt de koperscommissie, btw en invoerrechten erbij op en zegt wat je maximaal zou moeten bieden.</p>
@@ -113,7 +131,10 @@
       </form>
       <small id="mailNote">Eén e-mail over hoe je een sieraadadvertentie leest. We delen je adres met niemand; afmelden met één klik.</small>
     </div>
+    </section>
   </div>
+
+  <div id="credit">Waardebepaling door <a href="https://gcentelles.github.io/intrinsix-legal/calculator/nl/" target="_blank" rel="noopener">Intrinsix</a> · actuele metaalprijzen, stenen tegen groothandelsprijs.</div>
 
   <footer>
     <p style="margin:0 0 8px"><a href="https://gcentelles.github.io/intrinsix-legal/calculator/">English</a> · <a href="https://gcentelles.github.io/intrinsix-legal/calculator/es/">Español</a> · Nederlands</p>
@@ -122,9 +143,9 @@
   </footer>
 </div>
 <script>
-  // Public anon key: designed to ship in clients; web_leads is insert-only under RLS.
-  window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
-  window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
+// Public anon key: designed to ship in clients; web_leads is insert-only under RLS.
+window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
+window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
 </script>
 <script src="../calculator.js"></script>
 </body>

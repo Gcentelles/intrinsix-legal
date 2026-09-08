@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Put the jewellery value calculator on your own site — Intrinsix</title>
+<meta name="description" content="Free embeddable calculator for jewellers, pawn shops and gold buyers: live metal prices, wholesale stone prices, your own name on it. One line of HTML." />
+<link rel="canonical" href="https://gcentelles.github.io/intrinsix-legal/calculator/embed/" />
+<style>
+  :root { color-scheme: dark; --bg:#0b0f10; --card:#141a1c; --line:rgba(255,255,255,.08);
+          --gold:#c9a24b; --accent:#16aebf; --text:#eef2f1; --muted:#8b979b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 20px 72px; }
+  h1 { font-family:Palatino,Georgia,serif; font-size:2rem; line-height:1.2; margin:.2em 0 .3em; }
+  h2 { font-size:.78rem; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin:30px 0 10px; }
+  p.lede { color:var(--muted); margin-top:0; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  label { display:block; font-size:.82rem; color:var(--muted); margin-bottom:6px; }
+  input, select { width:100%; padding:11px 12px; background:#0e1416; color:var(--text);
+                  border:1px solid var(--line); border-radius:10px; font-size:1rem; }
+  textarea { width:100%; min-height:130px; background:#0e1416; color:var(--text); border:1px solid var(--line);
+             border-radius:10px; padding:12px; font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+  button { background:var(--accent); color:#04191c; font-weight:700; border:0; border-radius:999px;
+           padding:11px 20px; font-size:.95rem; cursor:pointer; }
+  ul { padding-left:1.1em; } li { margin:.35em 0; }
+  iframe { width:100%; border:0; }
+  footer { margin-top:40px; font-size:.8rem; color:var(--muted); }
+  footer a { color:var(--accent); }
+  @media (max-width:520px) { .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Put the calculator on your own site</h1>
+  <p class="lede">The same engine the Intrinsix app runs: live metal prices, stones at wholesale, and the
+  ladder from melt value to retail. Free, no account, no tracking of your visitors. Your name sits on top of
+  it; one small credit line sits under it.</p>
+
+  <h2>Why a shop wants this</h2>
+  <div class="card">
+    <ul>
+      <li>People searching "what is my gold ring worth" land on your page instead of a comparison site.</li>
+      <li>The customer arrives with a realistic number, so the conversation starts where you want it.</li>
+      <li>It answers the question honestly, which is the part that builds trust in a trade where nobody trusts anybody.</li>
+      <li>Nothing to install or maintain: prices refresh themselves every five minutes.</li>
+    </ul>
+  </div>
+
+  <h2>Build your snippet</h2>
+  <div class="card">
+    <div class="grid">
+      <div>
+        <label for="brand">Your shop name</label>
+        <input id="brand" placeholder="Goud &amp; Zilver Amsterdam" />
+      </div>
+      <div>
+        <label for="lang">Language</label>
+        <select id="lang">
+          <option value="nl">Nederlands</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <div>
+        <label for="theme">Background</label>
+        <select id="theme">
+          <option value="light">Light (white sites)</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+      <div>
+        <label for="accent">Accent colour</label>
+        <input id="accent" placeholder="16aebf" />
+      </div>
+    </div>
+  </div>
+
+  <h2>Paste this into your page</h2>
+  <div class="card">
+    <textarea id="snippet" readonly></textarea>
+    <p style="margin:12px 0 0"><button id="copy" type="button">Copy</button></p>
+  </div>
+
+  <h2>Live preview</h2>
+  <div class="card" style="padding:10px">
+    <iframe id="preview" title="Preview" height="720" loading="lazy"></iframe>
+  </div>
+
+  <h2>Terms, in three lines</h2>
+  <div class="card">
+    <ul>
+      <li>Free, for any shop, for as long as it exists. No fee now and no fee later.</li>
+      <li>Keep the credit line under the calculator; that is the whole payment.</li>
+      <li>Estimates from public spot prices and the visitor's own inputs; it is not an appraisal, and you stay
+      responsible for what you quote your own customers.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="https://gcentelles.github.io/intrinsix-legal/calculator/">Calculator</a> ·
+    <a href="https://gcentelles.github.io/intrinsix-legal/calculator/../privacy.html">Privacy</a> ·
+    <a href="mailto:hello@intrinsix.app">hello@intrinsix.app</a>
+  </footer>
+</div>
+<script>
+  var SITE = "https://gcentelles.github.io/intrinsix-legal/calculator";
+  var $ = function (id) { return document.getElementById(id); };
+  function build() {
+    var lang = $('lang').value;
+    var base = SITE + (lang === 'en' ? '/' : '/' + lang + '/');
+    var q = ['embed=1'];
+    if ($('theme').value === 'light') q.push('theme=light');
+    if ($('brand').value.trim()) q.push('brand=' + encodeURIComponent($('brand').value.trim()));
+    var accent = $('accent').value.replace('#', '').trim();
+    if (/^[0-9a-fA-F]{3,8}$/.test(accent)) q.push('accent=' + accent);
+    var url = base + '?' + q.join('&');
+    $('preview').src = url;
+    $('snippet').value =
+      '<iframe src="' + url + '" title="Jewellery value calculator"\n' +
+      '        style="width:100%;border:0;height:760px" loading="lazy"></iframe>\n' +
+      '<script>addEventListener("message",function(e){if(e.data&&e.data.type==="intrinsix:height"){' +
+      'var f=document.querySelector(\'iframe[src*="intrinsix"]\');if(f)f.style.height=e.data.height+"px";}});' +
+      '<\/script>';
+  }
+  ['brand', 'lang', 'theme', 'accent'].forEach(function (id) {
+    $(id).addEventListener('input', build);
+    $(id).addEventListener('change', build);
+  });
+  $('copy').addEventListener('click', function () {
+    $('snippet').select();
+    navigator.clipboard.writeText($('snippet').value);
+    $('copy').textContent = 'Copied';
+    setTimeout(function () { $('copy').textContent = 'Copy'; }, 1500);
+  });
+  build();
+</script>
+</body>
+</html>
