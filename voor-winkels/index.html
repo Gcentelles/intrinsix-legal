@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Intrinsix voor juweliers en opkopers</title>
+<meta name="description" content="Wat is dat sieraad waard? Metaal tegen de actuele koers, stenen tegen groothandelsprijs, en de vijf waarden die hetzelfde stuk eerlijk heeft. Gratis rekenen, gratis rekenhulp voor uw eigen site." />
+<link rel="canonical" href="https://intrinsix.nl/voor-winkels/" />
+<link rel="alternate" hreflang="nl" href="https://intrinsix.nl/voor-winkels/" />
+<link rel="alternate" hreflang="en" href="https://intrinsix.nl/en/for-shops/" />
+<link rel="alternate" hreflang="x-default" href="https://intrinsix.nl/en/for-shops/" />
+<meta property="og:title" content="Wat is dat sieraad echt waard?" />
+<meta property="og:description" content="Wat is dat sieraad waard? Metaal tegen de actuele koers, stenen tegen groothandelsprijs, en de vijf waarden die hetzelfde stuk eerlijk heeft. Gratis rekenen, gratis rekenhulp voor uw eigen site." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600&display=swap">
+<style>
+  :root {
+    --bg:#0b0f10; --card:#141a1c; --raise:#1a2224;
+    --line:rgba(233,226,210,.10); --line-strong:rgba(233,226,210,.22);
+    --gold:#c9a24b; --accent:#16aebf; --text:#eef2f1; --muted:#8b979b;
+    --ok:#5fb98b; --warn:#d98b5f;
+    --display:"Fraunces",Palatino,Georgia,serif;
+    --body:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--body);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
+  section { padding:64px 0; border-bottom:1px solid var(--line); }
+  h1,h2,h3 { font-family:var(--display); font-weight:600; text-wrap:balance; margin:0; }
+  h1 { font-size:clamp(2.3rem,5.4vw,3.9rem); line-height:1.04; letter-spacing:-.015em; }
+  h2 { font-size:clamp(1.6rem,3.1vw,2.3rem); line-height:1.12; margin-bottom:14px; }
+  h3 { font-size:1.12rem; line-height:1.3; margin-bottom:6px; }
+  p { margin:0 0 16px; max-width:62ch; }
+  p:last-child { margin-bottom:0; }
+  a { color:var(--accent); }
+  .eyebrow { font-family:var(--mono); font-size:.72rem; letter-spacing:.18em;
+             text-transform:uppercase; color:var(--gold); margin:0 0 18px; }
+  .lede { font-size:1.16rem; color:var(--muted); }
+  .muted { color:var(--muted); }
+  .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  header { padding:60px 0; border-bottom:1px solid var(--line);
+           background:radial-gradient(900px 380px at 15% -10%, rgba(22,174,191,.13), transparent 70%),
+                      radial-gradient(700px 340px at 88% 0%, rgba(201,162,75,.10), transparent 70%); }
+  .brandline { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+               font-family:var(--mono); font-size:.78rem; letter-spacing:.2em;
+               text-transform:uppercase; color:var(--muted); margin-bottom:34px; }
+  .brandline a { color:var(--text); text-decoration:none; letter-spacing:.2em; }
+  .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:end; }
+  .hero p { font-size:1.2rem; color:var(--muted); margin-top:22px; }
+  .ladder { border-top:1px solid var(--line-strong); }
+  .rung { display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:16px;
+          padding:11px 0; border-bottom:1px solid var(--line); }
+  .rung span { font-size:.95rem; color:var(--muted); }
+  .rung b { font-family:var(--mono); font-size:1.02rem; font-weight:500; font-variant-numeric:tabular-nums; }
+  .rung.target span { color:var(--text); }
+  .rung.target b { color:var(--accent); }
+  .rung-note { font-family:var(--mono); font-size:.72rem; color:var(--muted); margin-top:12px; }
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start; }
+  .split.tight { gap:40px; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:20px; }
+  .card .step { font-family:var(--mono); font-size:.72rem; letter-spacing:.16em;
+                color:var(--gold); display:block; margin-bottom:10px; }
+  .card p { font-size:.95rem; color:var(--muted); margin:0; }
+  .phones { display:flex; gap:22px; justify-content:center; flex-wrap:wrap; margin-top:40px; }
+  .phone { width:232px; border-radius:26px; padding:8px; background:#05090a;
+           border:1px solid var(--line-strong); box-shadow:0 22px 50px rgba(0,0,0,.55); margin:0; }
+  .phone img { display:block; width:100%; border-radius:19px; }
+  .phone figcaption { font-family:var(--mono); font-size:.7rem; letter-spacing:.1em;
+                      text-transform:uppercase; color:var(--muted); text-align:center; padding:12px 4px 4px; }
+  .sheet { width:100%; border-collapse:collapse; font-size:.95rem; }
+  .sheet caption { text-align:left; font-family:var(--mono); font-size:.72rem; letter-spacing:.16em;
+                   text-transform:uppercase; color:var(--gold); padding-bottom:12px; }
+  .sheet th { text-align:left; font-family:var(--mono); font-weight:400; font-size:.7rem;
+              letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+              padding:0 14px 9px 0; border-bottom:1px solid var(--line-strong); }
+  .sheet td { padding:11px 14px 11px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .sheet td.n { font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .sheet tr:last-child td { border-bottom:0; }
+  .sheet tr.total td { color:var(--text); font-weight:600; border-top:1px solid var(--line-strong); }
+  .scroll { overflow-x:auto; }
+  .tiers { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px; }
+  .tier { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:24px; }
+  .tier.pro { border-color:rgba(22,174,191,.4); background:var(--raise); }
+  .tier .price { font-family:var(--mono); font-size:1.9rem; letter-spacing:-.02em; }
+  .tier .price small { font-size:.82rem; color:var(--muted); letter-spacing:0; }
+  .tier ul { margin:16px 0 0; padding-left:18px; }
+  .tier li { font-size:.95rem; color:var(--muted); margin:7px 0; }
+  .limits { display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; margin-top:22px; }
+  .limit { display:grid; grid-template-columns:20px 1fr; gap:12px; align-items:start; }
+  .limit .mark { font-family:var(--mono); color:var(--warn); line-height:1.5; }
+  .limit.can .mark { color:var(--ok); }
+  .limit p { font-size:.95rem; margin:0; color:var(--muted); }
+  .marks { display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+  .mark-chip { font-family:var(--mono); font-size:.82rem; letter-spacing:.06em;
+               border:1px solid var(--line-strong); border-radius:2px; padding:7px 11px; color:var(--text); }
+  .mark-chip i { color:var(--muted); font-style:normal; }
+  .cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+  .btn { display:inline-block; text-decoration:none; font-weight:600; font-size:.98rem;
+         padding:13px 22px; border-radius:3px; background:var(--accent); color:#04191c; }
+  .btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .btn:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+  footer { padding:40px 0 64px; color:var(--muted); font-size:.84rem; }
+  footer p { max-width:74ch; margin-bottom:10px; }
+  @media (max-width:860px) {
+    .hero-grid, .split, .tiers, .limits { grid-template-columns:1fr; gap:34px; }
+    .cards { grid-template-columns:1fr; }
+    section { padding:48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandline"><a href="https://intrinsix.nl/">Intrinsix</a> <span>Sieraadwaardering &middot; voor de vakhandel</span></div>
+    <div class="hero-grid">
+      <div class="hero">
+        <h1>Wat is dat sieraad echt waard?</h1>
+        <p>Een hulpmiddel dat die vraag in ongeveer een minuut beantwoordt: het metaal tegen de koers van dat moment, de stenen tegen groothandelsprijs, en de vijf getallen die hetzelfde stuk eerlijk waard is, afhankelijk van wie er koopt.</p>
+      </div>
+      <div>
+        <div class="ladder">
+          <div class="rung"><span>Intrinsiek, smeltwaarde</span><b>&euro;&thinsp;714</b></div>
+          <div class="rung"><span>Groothandel, handelaar</span><b>&euro;&thinsp;1.060</b></div>
+          <div class="rung target"><span>Eerlijke prijs, particulier</span><b>&euro;&thinsp;1.486</b></div>
+          <div class="rung"><span>Tweedehandswinkel</span><b>&euro;&thinsp;2.080</b></div>
+          <div class="rung"><span>Nieuw in de winkel</span><b>&euro;&thinsp;3.330</b></div>
+        </div>
+        <p class="rung-note">18k ring, 5,9&thinsp;g netto, 0,52&thinsp;ct &middot; uitgewerkt voorbeeld</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Het probleem</p>
+    <div class="split">
+      <div>
+        <h2>Eén sieraad, vijf eerlijke getallen, en niemand legt het verschil uit</h2>
+        <p>Er komt iemand binnen met een bedrag in zijn hoofd. Dat komt van een verzekeringstaxatie, een etalage of een tante. Het is bijna nooit het getal dat u zo gaat noemen, en het volgende kwartier gaat op aan uitleggen waarom.</p>
+        <p>Het rekenwerk eronder is niet moeilijk. Het is alleen tijdrovend, en er gaan elke week dezelfde drie dingen mis.</p>
+      </div>
+      <div>
+        <div class="limits">
+          <div class="limit"><span class="mark">01</span><p><strong>Brutogewicht is geen goudgewicht.</strong> Een ring van 12&thinsp;g met stenen kan 5&thinsp;g metaal bevatten.</p></div>
+          <div class="limit"><span class="mark">02</span><p><strong>Karaat alleen zegt niets.</strong> Een diamant van 1&thinsp;ct loopt van ongeveer &euro;700 tot &euro;12.000.</p></div>
+          <div class="limit"><span class="mark">03</span><p><strong>Behandeling laat de waarde instorten.</strong> Een glasgevulde robijn is minder waard dan het goud eromheen.</p></div>
+          <div class="limit"><span class="mark">04</span><p><strong>Labgroei is overal.</strong> Chemisch identiek, en 10 tot 20&nbsp;% van de prijs.</p></div>
+        </div>
+        <div class="marks">
+          <span class="mark-chip">750 <i>75&thinsp;% Au</i></span>
+          <span class="mark-chip">585 <i>58,5&thinsp;%</i></span>
+          <span class="mark-chip">375 <i>37,5&thinsp;%</i></span>
+          <span class="mark-chip">925 <i>sterling</i></span>
+          <span class="mark-chip">PT950 <i>platina</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Hoe het werkt</p>
+    <h2>Drie invoervelden, één scherm, ongeveer een minuut</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="step">STAP 01</span>
+        <h3>Voer het sieraad in</h3>
+        <p>Metaal, keurmerk, netto gewicht zonder de stenen. Stenen op karaat, natuurlijk of labgroei. Losse stenen zonder metaal kunnen ook.</p>
+      </div>
+      <div class="card">
+        <span class="step">STAP 02</span>
+        <h3>De prijzen komen vanzelf</h3>
+        <p>De metaalkoers wordt live opgehaald en ververst zichzelf. Steenprijzen komen uit een groothandelsmatrix, en u kunt alles met de hand overschrijven.</p>
+      </div>
+      <div class="card">
+        <span class="step">STAP 03</span>
+        <h3>Lees de ladder</h3>
+        <p>Vijf waarden naast elkaar, van smeltwaarde tot nieuw in de winkel, zodat het verschil dat u aan een klant uitlegt op het scherm staat in plaats van in uw hoofd.</p>
+      </div>
+    </div>
+    <div class="phones">
+      <figure class="phone"><img src="/img/01-calculate.jpg" alt="Invoerscherm: metaal, karaat, netto gewicht en stenen" loading="lazy"><figcaption>Een sieraad invoeren</figcaption></figure>
+      <figure class="phone"><img src="/img/02-result.jpg" alt="Resultaatscherm met de vijf waarden en het maximale bod" loading="lazy"><figcaption>De vijf waarden</figcaption></figure>
+      <figure class="phone"><img src="/img/03-onboarding.jpg" alt="Uitleg bij de eerste keer openen" loading="lazy"><figcaption>Eerste keer</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Inkopen op een veiling</p>
+    <div class="split">
+      <div>
+        <h2>De hamerprijs is niet de prijs</h2>
+        <p>Koopt u voorraad op veilingen, dan telt de app erbij op wat de advertentie weglaat, en geeft het maximum dat u zou moeten bieden, niet het maximum dat u zou kunnen bieden.</p>
+        <p>Plak de link van een kavel en de specificaties worden voor u uitgelezen; u bevestigt elke waarde voordat hij meetelt. Op &euro;1.000 hamerprijs, kopend binnen de EU:</p>
+      </div>
+      <div class="scroll">
+        <table class="sheet">
+          <caption>Wat &euro;1.000 hamerprijs echt kost</caption>
+          <thead><tr><th>Post</th><th>Gebruikelijk</th></tr></thead>
+          <tbody>
+            <tr><td>Hamerprijs</td><td class="n">&euro;&thinsp;1.000</td></tr>
+            <tr><td>Koperscommissie, 9 tot 25&nbsp;%</td><td class="n">+&euro;&thinsp;90 tot 250</td></tr>
+            <tr><td>Btw over de commissie</td><td class="n">+21&nbsp;% daarvan</td></tr>
+            <tr><td>Verzending en verzekering</td><td class="n">+&euro;&thinsp;15 tot 60</td></tr>
+            <tr><td>Van buiten de EU: invoer-btw en rechten</td><td class="n">+21&nbsp;% en hoger</td></tr>
+            <tr class="total"><td>Totaal, verkoper buiten de EU</td><td class="n">+35 tot 45&nbsp;%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Wat het kost</p>
+    <h2>Het rekenwerk is gratis. Altijd.</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Gratis</h3>
+        <div class="price">&euro;&thinsp;0</div>
+        <ul>
+          <li>Elke berekening, onbeperkt</li>
+          <li>Live metaalkoersen</li>
+          <li>Stenen tegen groothandelsprijs per karaat</li>
+          <li>Alle vijf de waarden, elke keer</li>
+          <li>Geen account nodig</li>
+        </ul>
+      </div>
+      <div class="tier pro">
+        <h3>Pro</h3>
+        <div class="price">&euro;&thinsp;14,99 <small>/ maand</small></div>
+        <ul>
+          <li>Een kavel importeren via de link, voor u uitgelezen</li>
+          <li>Opgeslagen lijst over meerdere stukken</li>
+          <li>Opzeggen in de App Store, wanneer u wilt</li>
+          <li>Eén import gratis, om het eerst te zien werken</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:22px;font-size:.95rem">Op de gratis versie wordt niets verkocht en er staat nergens reclame in de app. Heeft u alleen het rekenwerk aan de toonbank nodig, dan betaalt u nooit iets.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Voor uw website</p>
+    <div class="split tight">
+      <div>
+        <h2>Dezelfde rekenhulp, op uw eigen pagina, met uw naam erboven</h2>
+        <p>Eén regel HTML zet een insluitbare versie op uw site: uw winkelnaam erboven, uw accentkleur, en prijzen die zichzelf elke vijf minuten verversen.</p>
+        <p>Gratis, voor elke winkel, nu en later. De enige voorwaarde is het regeltje eronder dat naar ons verwijst. Dat is de hele afspraak.</p>
+        <p class="muted" style="font-size:.95rem">Een klant die al een realistisch getal heeft gezien, komt binnen om te praten in plaats van met een bedrag dat nergens vandaan komt.</p>
+        <div class="cta-row">
+          <a class="btn ghost" href="https://intrinsix.nl/embed/?c=trade-nl">Bouw uw eigen regel HTML</a>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="padding:16px 18px;border-bottom:1px solid var(--line)">
+            <div class="num" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">Goud &amp; Zilver Amsterdam</div>
+          </div>
+          <div style="padding:18px">
+            <div class="rung"><span>Metaalinhoud</span><b>&euro;&thinsp;536,63</b></div>
+            <div class="rung"><span>Stenen</span><b>&euro;&thinsp;950,00</b></div>
+            <div class="rung target"><span>Eerlijke prijs</span><b>&euro;&thinsp;1.486,00</b></div>
+            <p class="rung-note">Waardebepaling door Intrinsix &middot; actuele metaalprijzen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Waar het helpt, en waar niet</p>
+    <h2>De grenzen, voordat u ze zelf vindt</h2>
+    <div class="limits">
+      <div class="limit can"><span class="mark">+</span><p>Metaal tegen de live koers, elk gehalte, netto zonder de stenen.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Merktoeslagen. Een gesigneerd stuk is meer waard dan zijn onderdelen, en hoeveel meer weet de app niet.</p></div>
+      <div class="limit can"><span class="mark">+</span><p>Diamanten op de vier C's, natuurlijk en labgroei, tegen groothandelsprijs per karaat.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Oude slijpsels en antiek werk. Geen moderne gradering beschrijft die goed.</p></div>
+      <div class="limit can"><span class="mark">+</span><p>Alle veilingkosten: commissie, btw daarover, invoer-btw en rechten, verzending.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Behandeling herkennen. Hij rekent met wat u zegt dat de steen is.</p></div>
+      <div class="limit can"><span class="mark">+</span><p>Losse stenen zonder metaal, en sloopgoud zonder stenen.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Een taxateur vervangen. Het is het rekenwerk onder het oordeel, niet het oordeel.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Probeer hem op een stuk dat u al getaxeerd heeft</h2>
+    <p class="lede">Dat is de enige zinnige test: haal er iets doorheen waarvan u weet wat u betaald heeft, en kijk of het getal standhoudt.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/nl/app/id6787444891?ct=trade-nl&mt=8">Intrinsix in de App Store</a>
+      <a class="btn ghost" href="https://intrinsix.nl/embed/?c=trade-nl">Rekenhulp voor uw site</a>
+      <a class="btn ghost" href="https://intrinsix.nl/gids/?c=trade-nl">De kopersgids</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Nederlands · <a href="https://intrinsix.nl/en/for-shops/">English</a></p>
+    <p>Intrinsix &middot; Nederland &middot; <a href="https://intrinsix.nl/">intrinsix.nl</a> &middot; hallo@intrinsix.nl</p>
+    <p>De getallen op deze pagina zijn uitgewerkte voorbeelden op basis van echte invoer en publieke spotprijzen. De app geeft schattingen, geen taxatie en geen financieel advies; wat u een klant biedt blijft uw beslissing.</p>
+    <p>Het importeren van veilingkavels werkt met advertenties van Catawiki. Intrinsix is een onafhankelijk hulpmiddel zonder enige band met, sponsoring door of goedkeuring van Catawiki of welk veilinghuis dan ook; de naam staat er alleen om te zeggen welke advertenties de import leest.</p>
+    <p><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Voorwaarden</a></p>
+  </div>
+</footer>
+<script>
+// Public anon key: designed to ship in clients; web_leads is insert-only under RLS.
+window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
+window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
+</script>
+<script src="/hit.js" defer></script>
+</body>
+</html>

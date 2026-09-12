@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Intrinsix for jewellers and gold buyers</title>
+<meta name="description" content="What is that piece actually worth? Metal at the live spot price, stones at wholesale, and the five values the same piece honestly has. Free to calculate, and a free calculator for your own site." />
+<link rel="canonical" href="https://intrinsix.nl/en/for-shops/" />
+<link rel="alternate" hreflang="nl" href="https://intrinsix.nl/voor-winkels/" />
+<link rel="alternate" hreflang="en" href="https://intrinsix.nl/en/for-shops/" />
+<link rel="alternate" hreflang="x-default" href="https://intrinsix.nl/en/for-shops/" />
+<meta property="og:title" content="What is that piece actually worth?" />
+<meta property="og:description" content="What is that piece actually worth? Metal at the live spot price, stones at wholesale, and the five values the same piece honestly has. Free to calculate, and a free calculator for your own site." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600&display=swap">
+<style>
+  :root {
+    --bg:#0b0f10; --card:#141a1c; --raise:#1a2224;
+    --line:rgba(233,226,210,.10); --line-strong:rgba(233,226,210,.22);
+    --gold:#c9a24b; --accent:#16aebf; --text:#eef2f1; --muted:#8b979b;
+    --ok:#5fb98b; --warn:#d98b5f;
+    --display:"Fraunces",Palatino,Georgia,serif;
+    --body:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--body);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
+  section { padding:64px 0; border-bottom:1px solid var(--line); }
+  h1,h2,h3 { font-family:var(--display); font-weight:600; text-wrap:balance; margin:0; }
+  h1 { font-size:clamp(2.3rem,5.4vw,3.9rem); line-height:1.04; letter-spacing:-.015em; }
+  h2 { font-size:clamp(1.6rem,3.1vw,2.3rem); line-height:1.12; margin-bottom:14px; }
+  h3 { font-size:1.12rem; line-height:1.3; margin-bottom:6px; }
+  p { margin:0 0 16px; max-width:62ch; }
+  p:last-child { margin-bottom:0; }
+  a { color:var(--accent); }
+  .eyebrow { font-family:var(--mono); font-size:.72rem; letter-spacing:.18em;
+             text-transform:uppercase; color:var(--gold); margin:0 0 18px; }
+  .lede { font-size:1.16rem; color:var(--muted); }
+  .muted { color:var(--muted); }
+  .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  header { padding:60px 0; border-bottom:1px solid var(--line);
+           background:radial-gradient(900px 380px at 15% -10%, rgba(22,174,191,.13), transparent 70%),
+                      radial-gradient(700px 340px at 88% 0%, rgba(201,162,75,.10), transparent 70%); }
+  .brandline { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+               font-family:var(--mono); font-size:.78rem; letter-spacing:.2em;
+               text-transform:uppercase; color:var(--muted); margin-bottom:34px; }
+  .brandline a { color:var(--text); text-decoration:none; letter-spacing:.2em; }
+  .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:end; }
+  .hero p { font-size:1.2rem; color:var(--muted); margin-top:22px; }
+  .ladder { border-top:1px solid var(--line-strong); }
+  .rung { display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:16px;
+          padding:11px 0; border-bottom:1px solid var(--line); }
+  .rung span { font-size:.95rem; color:var(--muted); }
+  .rung b { font-family:var(--mono); font-size:1.02rem; font-weight:500; font-variant-numeric:tabular-nums; }
+  .rung.target span { color:var(--text); }
+  .rung.target b { color:var(--accent); }
+  .rung-note { font-family:var(--mono); font-size:.72rem; color:var(--muted); margin-top:12px; }
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start; }
+  .split.tight { gap:40px; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:20px; }
+  .card .step { font-family:var(--mono); font-size:.72rem; letter-spacing:.16em;
+                color:var(--gold); display:block; margin-bottom:10px; }
+  .card p { font-size:.95rem; color:var(--muted); margin:0; }
+  .phones { display:flex; gap:22px; justify-content:center; flex-wrap:wrap; margin-top:40px; }
+  .phone { width:232px; border-radius:26px; padding:8px; background:#05090a;
+           border:1px solid var(--line-strong); box-shadow:0 22px 50px rgba(0,0,0,.55); margin:0; }
+  .phone img { display:block; width:100%; border-radius:19px; }
+  .phone figcaption { font-family:var(--mono); font-size:.7rem; letter-spacing:.1em;
+                      text-transform:uppercase; color:var(--muted); text-align:center; padding:12px 4px 4px; }
+  .sheet { width:100%; border-collapse:collapse; font-size:.95rem; }
+  .sheet caption { text-align:left; font-family:var(--mono); font-size:.72rem; letter-spacing:.16em;
+                   text-transform:uppercase; color:var(--gold); padding-bottom:12px; }
+  .sheet th { text-align:left; font-family:var(--mono); font-weight:400; font-size:.7rem;
+              letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+              padding:0 14px 9px 0; border-bottom:1px solid var(--line-strong); }
+  .sheet td { padding:11px 14px 11px 0; border-bottom:1px solid var(--line); vertical-align:top; }
+  .sheet td.n { font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .sheet tr:last-child td { border-bottom:0; }
+  .sheet tr.total td { color:var(--text); font-weight:600; border-top:1px solid var(--line-strong); }
+  .scroll { overflow-x:auto; }
+  .tiers { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px; }
+  .tier { background:var(--card); border:1px solid var(--line); border-radius:4px; padding:24px; }
+  .tier.pro { border-color:rgba(22,174,191,.4); background:var(--raise); }
+  .tier .price { font-family:var(--mono); font-size:1.9rem; letter-spacing:-.02em; }
+  .tier .price small { font-size:.82rem; color:var(--muted); letter-spacing:0; }
+  .tier ul { margin:16px 0 0; padding-left:18px; }
+  .tier li { font-size:.95rem; color:var(--muted); margin:7px 0; }
+  .limits { display:grid; grid-template-columns:1fr 1fr; gap:18px 40px; margin-top:22px; }
+  .limit { display:grid; grid-template-columns:20px 1fr; gap:12px; align-items:start; }
+  .limit .mark { font-family:var(--mono); color:var(--warn); line-height:1.5; }
+  .limit.can .mark { color:var(--ok); }
+  .limit p { font-size:.95rem; margin:0; color:var(--muted); }
+  .marks { display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+  .mark-chip { font-family:var(--mono); font-size:.82rem; letter-spacing:.06em;
+               border:1px solid var(--line-strong); border-radius:2px; padding:7px 11px; color:var(--text); }
+  .mark-chip i { color:var(--muted); font-style:normal; }
+  .cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+  .btn { display:inline-block; text-decoration:none; font-weight:600; font-size:.98rem;
+         padding:13px 22px; border-radius:3px; background:var(--accent); color:#04191c; }
+  .btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+  .btn:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+  footer { padding:40px 0 64px; color:var(--muted); font-size:.84rem; }
+  footer p { max-width:74ch; margin-bottom:10px; }
+  @media (max-width:860px) {
+    .hero-grid, .split, .tiers, .limits { grid-template-columns:1fr; gap:34px; }
+    .cards { grid-template-columns:1fr; }
+    section { padding:48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandline"><a href="https://intrinsix.nl/en/">Intrinsix</a> <span>Jewellery valuation &middot; for the trade</span></div>
+    <div class="hero-grid">
+      <div class="hero">
+        <h1>What is that piece actually worth?</h1>
+        <p>A tool that answers it in about a minute: the metal at the spot price of that moment, the stones at wholesale, and the five numbers the same piece is honestly worth depending on who is buying.</p>
+      </div>
+      <div>
+        <div class="ladder">
+          <div class="rung"><span>Intrinsic, break-up floor</span><b>&euro;&thinsp;714</b></div>
+          <div class="rung"><span>Wholesale, dealer</span><b>&euro;&thinsp;1,060</b></div>
+          <div class="rung target"><span>Fair price, private sale</span><b>&euro;&thinsp;1,486</b></div>
+          <div class="rung"><span>Second-hand shop</span><b>&euro;&thinsp;2,080</b></div>
+          <div class="rung"><span>New retail</span><b>&euro;&thinsp;3,330</b></div>
+        </div>
+        <p class="rung-note">18k ring, 5.9&thinsp;g net, 0.52&thinsp;ct &middot; worked example</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <div class="split">
+      <div>
+        <h2>One piece, five honest numbers, and nobody explains the gap</h2>
+        <p>A customer arrives with a figure in their head. It came from an insurance valuation, a shop window, or an aunt. It is almost never the number you are about to say out loud, and the next ten minutes go on explaining why.</p>
+        <p>The arithmetic underneath is not hard. It is just tedious, and three things go wrong in it every week.</p>
+      </div>
+      <div>
+        <div class="limits">
+          <div class="limit"><span class="mark">01</span><p><strong>Gross weight is not gold weight.</strong> A 12&thinsp;g ring with stones can hold 5&thinsp;g of metal.</p></div>
+          <div class="limit"><span class="mark">02</span><p><strong>Carat weight alone says nothing.</strong> A 1&thinsp;ct diamond runs from about &euro;700 to &euro;12,000.</p></div>
+          <div class="limit"><span class="mark">03</span><p><strong>Treatment collapses value.</strong> A glass-filled ruby is worth less than the gold around it.</p></div>
+          <div class="limit"><span class="mark">04</span><p><strong>Lab-grown is everywhere.</strong> Chemically identical, and 10 to 20&nbsp;% of the price.</p></div>
+        </div>
+        <div class="marks">
+          <span class="mark-chip">750 <i>75&thinsp;% Au</i></span>
+          <span class="mark-chip">585 <i>58.5&thinsp;%</i></span>
+          <span class="mark-chip">375 <i>37.5&thinsp;%</i></span>
+          <span class="mark-chip">925 <i>sterling</i></span>
+          <span class="mark-chip">PT950 <i>platinum</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>Three inputs, one screen, about a minute</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="step">STEP 01</span>
+        <h3>Enter the piece</h3>
+        <p>Metal, hallmark, net weight without the stones. Stones by carat, natural or lab-grown. Loose stones with no metal at all are fine.</p>
+      </div>
+      <div class="card">
+        <span class="step">STEP 02</span>
+        <h3>Prices arrive by themselves</h3>
+        <p>The metal spot price is fetched live and refreshes on its own. Stone prices come from a wholesale matrix, and you can override any of it by hand.</p>
+      </div>
+      <div class="card">
+        <span class="step">STEP 03</span>
+        <h3>Read the ladder</h3>
+        <p>Five values side by side, from melt floor to new retail, so the difference you are explaining to a customer is on the screen instead of in your head.</p>
+      </div>
+    </div>
+    <div class="phones">
+      <figure class="phone"><img src="/img/01-calculate.jpg" alt="The input screen: metal, karat, net weight and stones" loading="lazy"><figcaption>Entering a piece</figcaption></figure>
+      <figure class="phone"><img src="/img/02-result.jpg" alt="The result screen showing the five-value ladder and the maximum bid" loading="lazy"><figcaption>The five values</figcaption></figure>
+      <figure class="phone"><img src="/img/03-onboarding.jpg" alt="The first-run explanation of what the app does" loading="lazy"><figcaption>First run</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Buying at auction</p>
+    <div class="split">
+      <div>
+        <h2>The hammer price is not the price</h2>
+        <p>If you buy stock at auction, the app adds what the listing leaves out and returns the maximum you should bid, not the maximum you could.</p>
+        <p>Paste an auction lot link and the specifications are extracted for you; you confirm every value before it counts. On a &euro;1,000 hammer, buying inside the EU:</p>
+      </div>
+      <div class="scroll">
+        <table class="sheet">
+          <caption>What &euro;1,000 hammer really costs</caption>
+          <thead><tr><th>Line</th><th>Typical</th></tr></thead>
+          <tbody>
+            <tr><td>Hammer</td><td class="n">&euro;&thinsp;1,000</td></tr>
+            <tr><td>Buyer's premium, 9 to 25&nbsp;%</td><td class="n">+&euro;&thinsp;90 to 250</td></tr>
+            <tr><td>VAT on the premium</td><td class="n">+21&nbsp;% of that</td></tr>
+            <tr><td>Shipping and insurance</td><td class="n">+&euro;&thinsp;15 to 60</td></tr>
+            <tr><td>From outside the EU: import VAT and duty</td><td class="n">+21&nbsp;% and up</td></tr>
+            <tr class="total"><td>Landed, non-EU seller</td><td class="n">+35 to 45&nbsp;%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What it costs</p>
+    <h2>The arithmetic is free. Always.</h2>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Free</h3>
+        <div class="price">&euro;&thinsp;0</div>
+        <ul>
+          <li>Every calculation, unlimited</li>
+          <li>Live metal spot prices</li>
+          <li>Stones at wholesale per carat</li>
+          <li>All five values, every time</li>
+          <li>No account required</li>
+        </ul>
+      </div>
+      <div class="tier pro">
+        <h3>Pro</h3>
+        <div class="price">&euro;&thinsp;14.99 <small>/ month</small></div>
+        <ul>
+          <li>Import a lot from its link, extracted for you</li>
+          <li>Saved watchlist across pieces</li>
+          <li>Cancel in the App Store, any time</li>
+          <li>Free for one import, to see it work first</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:22px;font-size:.95rem">Nothing is sold on the free tier and there is no advertising anywhere in the app. If the counter side of the work is all you need, you never pay.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">For your website</p>
+    <div class="split tight">
+      <div>
+        <h2>The same calculator, on your own page, with your name on it</h2>
+        <p>One line of HTML puts an embeddable version on your site: your shop name above it, your accent colour, prices refreshing themselves every five minutes.</p>
+        <p>Free, for any shop, now and later. The only condition is the credit line underneath. That is the entire deal.</p>
+        <p class="muted" style="font-size:.95rem">A customer who has already seen a realistic number arrives ready to talk, instead of arriving with a figure that came from nowhere.</p>
+        <div class="cta-row">
+          <a class="btn ghost" href="https://intrinsix.nl/embed/?c=trade-en">Build your one line of HTML</a>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="padding:16px 18px;border-bottom:1px solid var(--line)">
+            <div class="num" style="font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)">Goud &amp; Zilver Amsterdam</div>
+          </div>
+          <div style="padding:18px">
+            <div class="rung"><span>Metal content</span><b>&euro;&thinsp;536.63</b></div>
+            <div class="rung"><span>Stones</span><b>&euro;&thinsp;950.00</b></div>
+            <div class="rung target"><span>Fair price</span><b>&euro;&thinsp;1,486.00</b></div>
+            <p class="rung-note">Valuation by Intrinsix &middot; live metal prices</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Where it helps, and where it does not</p>
+    <h2>The limits, before you find them yourself</h2>
+    <div class="limits">
+      <div class="limit can"><span class="mark">+</span><p>Metal at the live spot price, any purity, net of the stones.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Brand premiums. A signed piece is worth more than its parts, and the app does not know by how much.</p></div>
+      <div class="limit can"><span class="mark">+</span><p>Diamonds by the four Cs, natural and lab-grown, at wholesale per carat.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Old cuts and antique work. No modern grade describes them properly.</p></div>
+      <div class="limit can"><span class="mark">+</span><p>All auction costs: premium, VAT on the premium, import VAT and duty, shipping.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Detecting treatment. It prices what you tell it the stone is.</p></div>
+      <div class="limit can"><span class="mark">+</span><p>Loose stones with no metal, and scrap with no stones.</p></div>
+      <div class="limit"><span class="mark">&minus;</span><p>Replacing a valuer. It is the arithmetic under the judgement, not the judgement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Try it against a piece you have already valued</h2>
+    <p class="lede">That is the only test worth running: put something through it where you already know what you paid, and see whether the number holds.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/us/app/id6787444891?ct=trade-en&mt=8">Intrinsix on the App Store</a>
+      <a class="btn ghost" href="https://intrinsix.nl/embed/?c=trade-en">Build the widget for your site</a>
+      <a class="btn ghost" href="https://intrinsix.nl/en/guide/?c=trade-en">Read the buyer's guide</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><a href="https://intrinsix.nl/voor-winkels/">Nederlands</a> · English</p>
+    <p>Intrinsix &middot; Nederland &middot; <a href="https://intrinsix.nl/en/">intrinsix.nl</a> &middot; hello@intrinsix.nl</p>
+    <p>Figures on this page are worked examples from real inputs and public spot prices. The app produces estimates, not an appraisal, and not financial advice; what you quote a customer remains your call.</p>
+    <p>Auction lot import works with listings from Catawiki. Intrinsix is an independent tool with no affiliation with, sponsorship by, or endorsement from Catawiki or any auction house; the name is used only to say which listings the importer reads.</p>
+    <p><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+  </div>
+</footer>
+<script>
+// Public anon key: designed to ship in clients; web_leads is insert-only under RLS.
+window.INTRINSIX_SUPABASE_URL = "https://tzimucvdgxdoyilxwiat.supabase.co";
+window.INTRINSIX_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6aW11Y3ZkZ3hkb3lpbHh3aWF0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3MDc4NjcsImV4cCI6MjA5NzI4Mzg2N30.LLb4aU5048EqWxPsBvItU0jErnz7FhPF9PAEDzr8JDI";
+</script>
+<script src="/hit.js" defer></script>
+</body>
+</html>
