@@ -44,6 +44,21 @@
   footer a { color:var(--accent); }
   @media (max-width:520px) { .grid { grid-template-columns:1fr; } }
 
+  /* One bar across every page: the guide used to be a dead end, and the widget
+     builder had no way back to the calculator. */
+  .sitenav { border-bottom:1px solid var(--line); background:var(--bg); }
+  .sitenav .navwrap { max-width:1080px; margin:0 auto; padding:0 28px;
+                      display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+                      min-height:54px; }
+  .sitenav a { text-decoration:none; font-size:.88rem; color:var(--muted); }
+  .sitenav a:hover { color:var(--text); }
+  .sitenav a[aria-current="page"] { color:var(--text); }
+  .sitenav .navbrand { margin-right:auto; color:var(--text); font-weight:600;
+                       letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; }
+  .sitenav a:focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+  @media (max-width:560px) { .sitenav .navwrap { gap:14px; min-height:0; padding:10px 20px; } }
+  body.embed .sitenav { display:none; }
+
   /* Light palette, for embeds on the white sites most jewellers run. */
   body.light { --bg:#ffffff; --card:#f7f8f8; --line:rgba(0,0,0,.10); --text:#12191b; --muted:#5d6a6e; }
   body.light input, body.light select { background:#fff; }
@@ -61,6 +76,7 @@
 </style>
 </head>
 <body>
+<nav class="sitenav"><div class="navwrap"><a class="navbrand" href="https://intrinsix.nl/en/">Intrinsix</a><a href="https://intrinsix.nl/en/" aria-current="page">Calculator</a><a href="https://intrinsix.nl/en/guide/">Buyer's guide</a><a href="https://intrinsix.nl/en/for-shops/">For shops</a><a href="https://intrinsix.nl/embed/">Widget</a></div></nav>
 <div class="wrap">
   <h1>What is that piece actually worth?</h1>
   <p class="lede">A shop price and a value are different numbers. This calculator gives you the second one: the metal at today's live spot, the stones at wholesale, and the ladder in between — the same engine the <a href="https://apps.apple.com/us/app/id6787444891?ct=web-en&mt=8">Intrinsix app</a> runs.</p>

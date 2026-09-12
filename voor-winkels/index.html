@@ -106,6 +106,21 @@
   .btn:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
   footer { padding:40px 0 64px; color:var(--muted); font-size:.84rem; }
   footer p { max-width:74ch; margin-bottom:10px; }
+
+  /* One bar across every page: the guide used to be a dead end, and the widget
+     builder had no way back to the calculator. */
+  .sitenav { border-bottom:1px solid var(--line); background:var(--bg); }
+  .sitenav .navwrap { max-width:1080px; margin:0 auto; padding:0 28px;
+                      display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+                      min-height:54px; }
+  .sitenav a { text-decoration:none; font-size:.88rem; color:var(--muted); }
+  .sitenav a:hover { color:var(--text); }
+  .sitenav a[aria-current="page"] { color:var(--text); }
+  .sitenav .navbrand { margin-right:auto; color:var(--text); font-weight:600;
+                       letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; }
+  .sitenav a:focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+  @media (max-width:560px) { .sitenav .navwrap { gap:14px; min-height:0; padding:10px 20px; } }
+
   @media (max-width:860px) {
     .hero-grid, .split, .tiers, .limits { grid-template-columns:1fr; gap:34px; }
     .cards { grid-template-columns:1fr; }
@@ -114,6 +129,7 @@
 </style>
 </head>
 <body>
+<nav class="sitenav"><div class="navwrap"><a class="navbrand" href="https://intrinsix.nl/">Intrinsix</a><a href="https://intrinsix.nl/">Rekenhulp</a><a href="https://intrinsix.nl/gids/">Kopersgids</a><a href="https://intrinsix.nl/voor-winkels/" aria-current="page">Voor winkels</a><a href="https://intrinsix.nl/embed/">Widget</a></div></nav>
 
 <header>
   <div class="wrap">

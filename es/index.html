@@ -44,6 +44,21 @@
   footer a { color:var(--accent); }
   @media (max-width:520px) { .grid { grid-template-columns:1fr; } }
 
+  /* One bar across every page: the guide used to be a dead end, and the widget
+     builder had no way back to the calculator. */
+  .sitenav { border-bottom:1px solid var(--line); background:var(--bg); }
+  .sitenav .navwrap { max-width:1080px; margin:0 auto; padding:0 28px;
+                      display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+                      min-height:54px; }
+  .sitenav a { text-decoration:none; font-size:.88rem; color:var(--muted); }
+  .sitenav a:hover { color:var(--text); }
+  .sitenav a[aria-current="page"] { color:var(--text); }
+  .sitenav .navbrand { margin-right:auto; color:var(--text); font-weight:600;
+                       letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; }
+  .sitenav a:focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:2px; }
+  @media (max-width:560px) { .sitenav .navwrap { gap:14px; min-height:0; padding:10px 20px; } }
+  body.embed .sitenav { display:none; }
+
   /* Light palette, for embeds on the white sites most jewellers run. */
   body.light { --bg:#ffffff; --card:#f7f8f8; --line:rgba(0,0,0,.10); --text:#12191b; --muted:#5d6a6e; }
   body.light input, body.light select { background:#fff; }
@@ -61,6 +76,7 @@
 </style>
 </head>
 <body>
+<nav class="sitenav"><div class="navwrap"><a class="navbrand" href="https://intrinsix.nl/es/">Intrinsix</a><a href="https://intrinsix.nl/es/" aria-current="page">Calculadora</a><a href="https://intrinsix.nl/es/guia/">Guía del comprador</a><a href="https://intrinsix.nl/embed/">Widget</a></div></nav>
 <div class="wrap">
   <h1>¿Cuánto vale realmente esa pieza?</h1>
   <p class="lede">El precio de una tienda y el valor de una pieza son números distintos. Esta calculadora te da el segundo: el metal al precio spot de hoy, las piedras a precio mayorista y la escalera que hay entre medias, con el mismo motor que usa la <a href="https://apps.apple.com/es/app/id6787444891?ct=web-es&mt=8">app Intrinsix</a>.</p>
