@@ -61,6 +61,9 @@
 
   /* Light palette, for embeds on the white sites most jewellers run. */
   body.light { --bg:#ffffff; --card:#f7f8f8; --line:rgba(0,0,0,.10); --text:#12191b; --muted:#5d6a6e; }
+  /* An embedded light widget must paint its own white, not fall through to the
+     host's canvas: transparent plus a dark colour-scheme renders a black frame. */
+  body.embed.light { background:#ffffff; }
   body.light input, body.light select { background:#fff; }
 
   /* Embed mode: the calculator only. The host page supplies the heading, the
