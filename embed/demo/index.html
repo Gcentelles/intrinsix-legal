@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Goud &amp; Zilver Amsterdam — voorbeeldpagina</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Demonstration page: an invented shop, used to show what the Intrinsix widget looks like once it is on a real website." />
+<style>
+  /* Deliberately a plain, white, slightly dated shop site: this has to look
+     like the pages the widget will actually land on, not like our own design. */
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:#2b2b2b;
+         font:16px/1.6 Georgia, "Times New Roman", serif; }
+  .demo-flag { background:#fff4d6; border-bottom:1px solid #e3d3a4; color:#6b5518;
+               font:600 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+               padding:9px 20px; text-align:center; }
+  .demo-flag a { color:#6b5518; }
+  header { border-bottom:3px double #c8b280; }
+  .top { max-width:940px; margin:0 auto; padding:26px 20px 18px; }
+  .shopname { font-size:1.9rem; letter-spacing:.02em; margin:0; color:#1d1d1d; }
+  .kvk { font:13px/1.5 -apple-system, BlinkMacSystemFont, Arial, sans-serif; color:#7a7a7a; margin:4px 0 0; }
+  nav { background:#f6f3ec; border-bottom:1px solid #e6e0d2; }
+  nav ul { max-width:940px; margin:0 auto; padding:0 20px; list-style:none;
+           display:flex; gap:26px; flex-wrap:wrap; }
+  nav a { display:block; padding:12px 0; text-decoration:none; color:#5a5041;
+          font:600 14px/1.4 -apple-system, BlinkMacSystemFont, Arial, sans-serif; }
+  nav a.on { color:#8a6d1f; border-bottom:2px solid #8a6d1f; }
+  main { max-width:940px; margin:0 auto; padding:30px 20px 60px; }
+  h1 { font-size:1.7rem; margin:0 0 12px; color:#1d1d1d; }
+  p { max-width:66ch; }
+  .cols { display:grid; grid-template-columns:1.3fr .7fr; gap:38px; align-items:start; margin-top:26px; }
+  aside { background:#f6f3ec; border:1px solid #e6e0d2; padding:18px; font-size:.92rem; }
+  aside h2 { font-size:1.05rem; margin:0 0 8px; }
+  aside ul { margin:0; padding-left:18px; } aside li { margin:5px 0; }
+  .widget-note { font:13px/1.5 -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+                 color:#7a7a7a; margin:0 0 10px; }
+  footer { border-top:1px solid #e6e0d2; background:#faf8f3; }
+  footer div { max-width:940px; margin:0 auto; padding:22px 20px;
+               font:13px/1.6 -apple-system, BlinkMacSystemFont, Arial, sans-serif; color:#7a7a7a; }
+  @media (max-width:780px) { .cols { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="demo-flag">
+  Voorbeeldpagina &middot; deze winkel bestaat niet. Hij laat zien hoe de
+  <a href="https://intrinsix.nl/embed/">Intrinsix-rekenhulp</a> eruitziet op een echte website.
+</div>
+
+<header>
+  <div class="top">
+    <p class="shopname">Goud &amp; Zilver Amsterdam</p>
+    <p class="kvk">Sinds 1974 &middot; Herengracht 000 &middot; ma&ndash;za 10.00&ndash;17.30</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Sieraden</a></li>
+    <li><a class="on" href="#">Goud verkopen</a></li>
+    <li><a href="#">Taxatie</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Wat is uw goud waard?</h1>
+  <p>Wij kopen gouden en zilveren sieraden, munten en sloopgoud. U kunt zonder
+  afspraak langskomen voor een kosteloze taxatie. Wilt u vooraf een idee van de
+  waarde? Reken het hieronder zelf uit.</p>
+
+  <div class="cols">
+    <div>
+      <p class="widget-note">Rekenhulp &middot; actuele metaalkoers</p>
+      <iframe id="intrinsix" src="https://intrinsix.nl/?embed=1&amp;theme=light&amp;brand=Goud%20%26%20Zilver%20Amsterdam&amp;c=demo-shop"
+              title="Rekenhulp: wat is mijn sieraad waard?"
+              style="width:100%;border:0;height:760px" loading="lazy"></iframe>
+    </div>
+    <aside>
+      <h2>Goed om te weten</h2>
+      <ul>
+        <li>Taxatie is gratis en vrijblijvend</li>
+        <li>Contante betaling of per bank</li>
+        <li>Legitimatie verplicht bij verkoop</li>
+        <li>Ook voor nalatenschappen</li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div>Goud &amp; Zilver Amsterdam is een verzonnen winkel. Deze pagina bestaat
+  alleen om te tonen wat de rekenhulp doet zodra hij op een echte website staat.</div>
+</footer>
+
+<script>
+  // The host page resizes the frame to whatever the widget reports, which is the
+  // same two lines every shop pastes.
+  addEventListener("message", function (e) {
+    if (e.data && e.data.type === "intrinsix:height") {
+      var f = document.getElementById("intrinsix");
+      if (f) f.style.height = e.data.height + "px";
+    }
+  });
+</script>
+</body>
+</html>
