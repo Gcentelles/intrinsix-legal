@@ -55,6 +55,7 @@
      between two opposite ticks and cut in one pass. */
   .sheet { position: relative; }
   .ticks { position: absolute; inset: 0; pointer-events: none; }
+  .sheet { overflow: hidden; }
   /* Borders, not a background colour: a browser drops background graphics when
      that box is unticked in the print dialog, and the marks would silently
      vanish. A border always prints. 9mm long, because a home printer eats the
@@ -382,7 +383,7 @@
 
 <!-- ============ SHEET 3: business cards ============ -->
 <section class="sheet cards">
-  <div class="scale" aria-hidden="true"><span>100 mm &mdash; klopt dit niet, dan staat de printer op "passend maken"</span></div>
+  <div class="scale" aria-hidden="true"><span>100 mm &mdash; anders schaalt de printer</span></div>
   <div class="ticks" aria-hidden="true">
     <i class="v" style="left:20mm;top:0"></i><i class="v" style="left:20mm;bottom:0"></i>
     <i class="v" style="left:105mm;top:0"></i><i class="v" style="left:105mm;bottom:0"></i>
@@ -518,7 +519,7 @@
 
 <!-- ============ SHEET 4: business cards, English ============ -->
 <section class="sheet cards">
-  <div class="scale" aria-hidden="true"><span>100 mm &mdash; klopt dit niet, dan staat de printer op "passend maken"</span></div>
+  <div class="scale" aria-hidden="true"><span>100 mm &mdash; anders schaalt de printer</span></div>
   <div class="ticks" aria-hidden="true">
     <i class="v" style="left:20mm;top:0"></i><i class="v" style="left:20mm;bottom:0"></i>
     <i class="v" style="left:105mm;top:0"></i><i class="v" style="left:105mm;bottom:0"></i>
